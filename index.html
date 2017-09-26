@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>grade</title>
+
+</head>
+<body>
+请输入成绩<input type="text" name="grade" id="grade"><button onclick="checkGrade()">查询</button>
+<script>
+	function checkGrade(){
+		var grade=parseInt(document.getElementById("grade").value);
+		var level;
+		switch(true){
+			case grade>=90&&grade<=100 : 
+			level=1;
+			break;
+			case grade>=80&&grade<90 : 
+			level=2;
+			break;
+			case grade>=70&&grade<80 : 
+			level=3;
+			break;
+			case grade>=60&&grade<70 : 
+			level=4;
+			break;
+			case grade>=50&&grade<60 : 
+			level=5;
+			break;
+			case grade>=40&&grade<50 : 
+			level=6;
+			break;
+			case grade>=30&&grade<40 : 
+			level=7;
+			break;
+			case grade>=20&&grade<30 : 
+			level=8;
+			break;
+			case grade>=10&&grade<20 : 
+			level=9;
+			break;
+			case grade>=0&&grade<10:
+			level=10;
+			break;
+			default:alert("请输入有效成绩");
+		}
+		if(level){
+			alert("你是"+level+"等生");
+		}
+	}	
+</script>	
+</body>
+</html>
